@@ -1,0 +1,16 @@
+<h1 class="animated fadeIn">Resultado: <small>{{termino}}</small></h1>
+<hr>
+
+<div *ngIf="heroes.length == 0" class="row animated fadeIn fast">
+    <div class="col-12">
+        <div role="alert" class="alert alert-info">
+            No existen resultados con el termino: {{termino}}
+        </div>
+    </div>
+</div>
+
+<div class="card-columns">
+
+    <app-heroe-tajeta [heroe]="heroe" *ngFor="let heroe of heroes; let i = index" class="card"></app-heroe-tajeta>
+    
+</div>

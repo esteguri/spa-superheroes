@@ -1,0 +1,7 @@
+<img class="card-img-top" [src]="heroe.img" [alt]="heroe.nombre"  >
+    <div class="card-body">
+    <h4 class="card-title">{{heroe.nombre}}</h4>
+    <p class="card-text">{{heroe.bio}}</p>
+    <p class="card-text text-muted">{{heroe.casa}} {{heroe.aparicion}}</p>
+    <button (click)="verHero()" class="btn btn-outline-info w-100" style="cursor: pointer">Ver mas</button>
+</div>

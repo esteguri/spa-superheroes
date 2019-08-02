@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" [routerLink]="['home']">SPA</a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['home']">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['heroes']">Heroes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['about']">About</a>
+        </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" onsubmit="return false">
+        <input class="form-control mr-sm-2" type="search" placeholder="Buscar Heroe" (keyup.enter)="buscarHeroe(buscarTexto.value)" #buscarTexto>
+        <button (click)="buscarHeroe(buscarTexto.value)" class="btn btn-outline-info my-2 my-sm-0">Buscar</button>
+        </form>
+    </div>
+</nav>
